@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "GetUserProfile";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">HABERLER</h1>
+<br />
+<a href="/Admin/News/AddNews/" class="btn btn-outline-dark"> Yeni Haber Oluştur</a>
+<br />
+<hr />
+<table class="table table-bordered">
+    <tr style="background-color:darkblue; text-align:center;color:white">
+     
+        <th>İçerik</th>
+        <th>Yayın Tarihi</th>
+        <th>Kategori</th>
+    </tr>
+
+        <tr style="background-color:lightgray; text-align:center">
+
+            <td>@ViewBag.username</td>
+            <td>@ViewBag.mail</td>
+
+        </tr>
+    
+</table> 

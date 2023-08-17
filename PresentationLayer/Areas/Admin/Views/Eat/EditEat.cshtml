@@ -1,0 +1,42 @@
+﻿@model Eat
+@{
+    ViewData["Title"] = "EditEat";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Yemek Düzenleme Sayfası</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="EatID" />
+    <label>Yemek Adı</label>
+    <input asp-for="EatTitle" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>İçerik</label>
+    <textarea asp-for="Content" rows="4" cols="165" class="input" style="background-color:lightgray"> </textarea>
+    <br />
+
+    <input type="hidden" asp-for="ReleaseDate" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>Yemek Fotoğrafı</label>
+    <input type="file" class="form-control border" name="Photo" />
+    <br />
+    @if (!String.IsNullOrWhiteSpace(Model.SignedUrl))
+    {
+        <div cite="md-col-10">
+            <img style="width:400px" src="@Model.SignedUrl" class="figure-img img-fluid rounded max-image-size" alt="@Model.SavedFileName">
+        </div>
+    }
+    <br />
+    <input name="SavedUrl" type="hidden" class="form-control" />
+    <input name="SavedFileName" type="hidden" class="form-control" />
+    <button class="btn btn-info"> Güncelle </button>
+</form>
+
+    <style>
+    .max-image-size {
+        max-width: 100%; /* Genişlik, içinde bulunduğu elemanın genişliğini aşmayacak şekilde küçültülür */
+        max-height: 30vh; /* Yükseklik, görüntünün ekran yüksekliğini aşmayacak şekilde sınırlanır */
+        width: auto; /* Genişlik oranına bağlı olarak otomatik genişlik hesaplanır */
+        height: auto; /* Yükseklik oranına bağlı olarak otomatik yükseklik hesaplanır */
+    }
+    </style>

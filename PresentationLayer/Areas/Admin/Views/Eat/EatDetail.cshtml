@@ -1,0 +1,28 @@
+﻿@using EntityLayer.DTOs;
+@model EatDetailDto
+@{
+    ViewData["Title"] = "EatDetail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-sm-12">
+	<div class="card">
+		<div class="card-header">
+			<h5 class="mb-0">Yemek Tarifi</h5>
+			<hr>
+			<a class="btn  btn-primary  m-t-5" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">@Model.EatTitle</a>
+
+		</div>
+		<div class="collapse" id="collapseExample">
+			<div class="card-body">
+				<p>Tarih:  @Model.ReleaseDate.ToShortDateString()</p>
+				<p class="mb-0">
+					@Model.Content
+				</p>
+				<div>
+					@Model.Photo
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

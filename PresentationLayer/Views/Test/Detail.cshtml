@@ -1,0 +1,188 @@
+﻿@model TestDetailsViewModel
+
+@{
+
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+@*<style>
+    .question {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+        .question h4 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .question img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .question ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .question li {
+            margin-bottom: 5px;
+        }
+
+        .question label {
+            background-color: #f2f2f2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+        }
+
+            .question label:hover {
+                background-color: #e0e0e0;
+            }
+
+        .question input[type="radio"] {
+            margin-right: 5px;
+        }
+
+    .submit-button {
+        margin-top: 20px;
+    }
+</style>
+
+
+
+
+<h2>@Model.TestName</h2>
+<p>Kategori: @Model.TestCategoryName</p>
+
+<form asp-controller="Test" asp-action="SubmitTest" method="post">
+    <input type="hidden" name="TestId" value="@Model.TestId" />
+    <input type="hidden" name="AppUserID" value="@ViewBag.UserId" />
+    @foreach (var soru in Model.Sorular)
+    {
+        <section class="question">
+            <h4>@soru.Content</h4>
+
+
+            <img style="max-height: 100vh;" src="@soru.SignedUrl" alt="Soru Resmi" />
+
+
+
+        <ul>
+            @foreach (var option in soru.QuestionOptions)
+            {
+                <li>
+                    <input type="radio" name="Answers[@soru.QuestionID]" value="@option.QuestionOptionID" />
+                    @option.Option
+                </li>
+            }
+        </ul>
+        </section>
+    }
+
+    <button type="submit" class="btn btn-outline-danger submit-button">Testi Gönder</button>
+</form>*@
+
+
+
+
+
+
+<style>
+    .question {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+        .question h4 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .question img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .question ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .question li {
+            margin-bottom: 5px;
+        }
+
+        .question label {
+            background-color: #f2f2f2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+        }
+
+            .question label:hover {
+                background-color: #e0e0e0;
+            }
+
+        .question input[type="radio"] {
+            margin-right: 5px;
+        }
+
+    .submit-button {
+        margin-top: 20px;
+    }
+</style>
+
+<h2>@Model.TestName</h2>
+<p>Kategori: @Model.TestCategoryName</p>
+
+<form asp-controller="Test" asp-action="SubmitTest" method="post">
+    <input type="hidden" name="TestId" value="@Model.TestId" />
+    @* <input type="hidden" name="AppUserID" value="@ViewBag.UserId" />*@
+
+    @foreach (var soru in Model.Sorular)
+    {
+        <section class="question">
+            <h4>@soru.Content</h4>
+
+            @if (soru.SignedUrl != null)
+            {
+                <img style="max-height: 100vh;" src="@soru.SignedUrl" alt="Soru Resmi" />
+
+            }
+
+
+
+            <ul>
+                @foreach (var option in soru.QuestionOptions)
+                {
+                    <li>
+                        <label>
+                            <input type="radio" name="Answers[@soru.QuestionID]" value="@option.QuestionOptionID" />
+                            @option.Option
+                        </label>
+                    </li>
+                }
+            </ul>
+        </section>
+    }
+
+    <button type="submit" class="btn btn-outline-danger submit-button">Testi Gönder</button>
+</form>

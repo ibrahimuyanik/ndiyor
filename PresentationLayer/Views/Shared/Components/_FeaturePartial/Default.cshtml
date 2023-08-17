@@ -1,0 +1,70 @@
+﻿@model List<EntityLayer.DTOs.NewsDetailDto>
+@{
+    string color = "";
+}
+
+
+<section class="featured-posts">
+    <div class="container">
+        <div class="row no-gutters">
+
+            @foreach (var item in Model.OrderByDescending(x => x.ReleaseDate).Take(3))
+            {
+                if(item.CategoryName == "Spor")
+                {
+                    color = "green";
+                }
+                if (item.CategoryName == "Gündem")
+                {
+                    color = "blue";
+                }
+                if (item.CategoryName == "Yemek")
+                {
+                    color = "red";
+                }
+                if (item.CategoryName == "TV&Sinema")
+                {
+                    color = "red";
+                }
+                if (item.CategoryName == "Eğlence")
+                {
+                    color = "yellow";
+                }
+                if (item.CategoryName == "Bilgisel")
+                {
+                    color = "black";
+                }
+                if (item.CategoryName == "Tur")
+                {
+                    color = "pink";
+                }
+                if (item.CategoryName == "Sağlık")
+                {
+                    color = "#FF3366";
+                }
+
+
+
+                <div class="col-md-6 col-xs-12 col-lg-4">
+                    <div class="featured-slider mr-md-3 mr-lg-3">
+
+                        <div class="item" style="background-image:url('@(item.SignedUrl)')">
+                            <div class="post-content">
+                                <a href="/News?categoryId=@item.CategoryID" class="post-cat" style="background-color:@color;">@item.CategoryName</a>
+                                <h2 class="slider-post-title">
+                                    <a href="/News/Detail?newsId=@item.NewsID">@item.Title</a>
+                                </h2>
+                                <div class="post-meta mt-2">
+                                    <span class="posted-time"><i class="fa fa-clock-o mr-2 text-danger"></i>@item.ReleaseDate.ToString("dd-MM-yyyy")</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            }          
+        </div>
+    </div>
+</section>

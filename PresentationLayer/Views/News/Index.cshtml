@@ -1,0 +1,101 @@
+﻿@model X.PagedList.IPagedList<EntityLayer.Concrete.News>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+
+
+    <div class="block category-listing">
+    <h3 class="news-title"><span>@Model[0].Category.CategoryName</span></h3>
+    </div>
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+
+            <div class="col-md-6 col-sm-6">
+                <div class="post-block-wrapper post-grid-view clearfix">
+                    <div class="post-thumbnail">
+                    <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">
+                        <img class="img-rounded" width="304" height="236" src="@item.SignedUrl" alt="post-thumbnail" />
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <a class="post-category" asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Category.CategoryName</a>
+                        <h2 class="post-title mt-3">
+                            <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Title</a>
+                        </h2>
+
+                        <div class="post-meta"> 
+                            <span class="post-author">
+
+                            <a href="author.html">@(((DateTime)item.ReleaseDate).ToString("dd-MM-yyyy"))</a>
+                            </span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        }
+        
+        
+    </div>
+
+
+<nav aria-label="pagination-wrapper" class="pagination-wrapper">
+    <ul class="pagination justify-content-center">
+        @if (Model.PageNumber > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "News", new { page = Model.PageNumber - 1, categoryId = ViewBag.CategoryId })" aria-label="Previous">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-left mr-2"></i>Previous</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link" aria-label="Previous" aria-disabled="true">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-left mr-2"></i>Previous</span>
+                </span>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Index", "News", new { page = i, categoryId = ViewBag.CategoryId })">@i</a>
+            </li>
+        }
+
+        @if (Model.PageNumber < ViewBag.TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "News", new { page = Model.PageNumber + 1, categoryId = ViewBag.CategoryId })" aria-label="Next">
+                    <span>Next<i class="fa fa-angle-double-right ml-2"></i></span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link" aria-label="Next" aria-disabled="true">
+                    <span>Next<i class="fa fa-angle-double-right ml-2"></i></span>
+                </span>
+            </li>
+        }
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+

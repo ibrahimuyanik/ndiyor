@@ -1,0 +1,17 @@
+﻿@model TestCategory
+@{
+    ViewData["Title"] = "EditTestCategory";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Test Kategori Güncelleme</h1>
+
+<form method="post">
+    <label>Test Kategori Adı</label>
+    <input type="hidden" asp-for="TestCategoryID" />
+    <input type="text" class="form-control" asp-for="TestCategoryName" style="background-color:lightgray"/>
+    <br />
+
+    <br />
+    <button class="btn btn-info"> Güncelle</button>
+</form>

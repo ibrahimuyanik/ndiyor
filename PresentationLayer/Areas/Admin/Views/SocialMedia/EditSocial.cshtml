@@ -1,0 +1,25 @@
+﻿@model SocialMedia
+@{
+    ViewData["Title"] = "EditSocial";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Sosyal Medya Düzenleme</h1>
+
+<form method="post">
+    <label>Sosyal Medya Adı</label>
+    <input type="hidden" asp-for="SocialMediaID" />
+    <input asp-for="Name" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>İkon</label>
+    <input asp-for="Icon" class="form-control" style="background-color:lightgray" />
+    <br />
+     <label>Adres</label>
+    <input asp-for="Url" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>Durumu</label>
+    <input asp-for="Status" class="form-control" style="background-color:lightgray" />
+    <br />
+    <br />
+    <button class="btn btn-info"> Kaydet</button>
+</form>

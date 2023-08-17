@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Eat
+@{
+    ViewData["Title"] = "AddEat";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Haber Ekleme Sayfası</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <label>Yemeğin Adı</label>
+    <input asp-for="EatTitle" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>İçerik</label>
+    <textarea asp-for="Content" rows="4" cols="165" class="input" style="background-color:lightgray"> </textarea>
+    <br />
+    <label>Yemek Resmi</label>
+    <input type="file" class="form-control border" name="Photo" />
+    <br />
+
+    <input name="SavedUrl" type="hidden" class="form-control" />
+    <input name="SavedFileName" type="hidden" class="form-control" />
+    <button class="btn btn-info"> Kaydet</button>
+</form>

@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<body>
+
+    
+
+    <div class="py-30"></div>
+
+    @section _FeaturePartial{
+    @await Component.InvokeAsync("_FeaturePartial")
+    }
+
+    <section class="block-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    @await Component.InvokeAsync("_EditorPicksPartial")
+
+                    <div class="py-40"></div>
+
+                    @await Component.InvokeAsync("_TechPartial")
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    @section TourGameHealth{
+       
+    <section class="news-style-four bg-light section-padding">
+        <div class="container">
+            <div class="row">
+                @await Component.InvokeAsync("_TourPartial")
+                @await Component.InvokeAsync("_GamePartial")
+                @await Component.InvokeAsync("_HealthPartial")
+            </div>
+        </div>
+    </section>
+        
+    }
+
+    @*<section class="section-padding">
+    <div class="container">
+    <div class="row">
+    @await Component.InvokeAsync("_LastestArticlesPartial")
+
+    @await Component.InvokeAsync("_TopAuthorsPartial")
+    </div>
+    </div>
+    </section>*@
+
+    <div class="py-40"></div>
+
+   
+
+</body>
+</html>

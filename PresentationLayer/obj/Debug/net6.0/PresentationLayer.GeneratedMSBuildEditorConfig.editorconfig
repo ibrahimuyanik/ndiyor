@@ -1,0 +1,337 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PresentationLayer
+build_property.RootNamespace = PresentationLayer
+build_property.ProjectDir = C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\PresentationLayer\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\PresentationLayer
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Admin/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Admin/GetProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cR2V0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Admin/GetUserByEmailAsync.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cR2V0VXNlckJ5RW1haWxBc3luYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Admin/GetUserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cR2V0VXNlclByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Category/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQWRkQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Category/EditCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Eat/AddEat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRWF0XEFkZEVhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Eat/EatDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRWF0XEVhdERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Eat/EditEat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRWF0XEVkaXRFYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Eat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRWF0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/News/AddNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xBZGROZXdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/News/EditNews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xFZGl0TmV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/News/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/News/NewsDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xOZXdzRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Notifications/PartialNotific.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTm90aWZpY2F0aW9uc1xQYXJ0aWFsTm90aWZpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/QuestionOption/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVlc3Rpb25PcHRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Question/AddQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVlc3Rpb25cQWRkUXVlc3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Question/EditQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVlc3Rpb25cRWRpdFF1ZXN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Question/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVlc3Rpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/SocialMedia/AddSocial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFcQWRkU29jaWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/SocialMedia/EditSocial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFcRWRpdFNvY2lhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/SocialMedia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU29jaWFsTWVkaWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Statistic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3RhdGlzdGljXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/TestCategory/AddTestCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdENhdGVnb3J5XEFkZFRlc3RDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/TestCategory/EditTestCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdENhdGVnb3J5XEVkaXRUZXN0Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/TestCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdENhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Test/AddTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdFxBZGRUZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Test/EditTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdFxFZGl0VGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/Test/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Comment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/ConfirmedMail/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlybWVkTWFpbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Default/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVmYXVsdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Eat/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWF0XERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Eat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWF0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/ErrorPage/Page404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JQYWdlXFBhZ2U0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/News/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/News/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Register/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0ZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_AdminContactPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluQ29udGFjdFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_BannerPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jhbm5lclBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_BeautyBlogPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0JlYXV0eUJsb2dQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_EditorPicksPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0VkaXRvclBpY2tzUGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_FeaturePartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0ZlYXR1cmVQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_FooterPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Zvb3RlclBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_GamePartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0dhbWVQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_HeadPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hlYWRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_HealthPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hlYWx0aFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_HotNewsPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0hvdE5ld3NQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_LastestArticlesPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0xhc3Rlc3RBcnRpY2xlc1BhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_NavbarPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX05hdmJhclBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_ScriptPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1NjcmlwdFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_SocialsTopPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1NvY2lhbHNUb3BQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_StayInTouchPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1N0YXlJblRvdWNoUGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_TechPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1RlY2hQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_TopAuthorsPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1RvcEF1dGhvcnNQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Components/_TourPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX1RvdXJQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/_HomeLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib21lTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/_LoginLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/_UserProfileLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyUHJvZmlsZUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Test/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Test/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Test/TestResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdFxUZXN0UmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/User/GetUserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHZXRVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibrah/Source/Workspaces/onedioProject/onedioProject/PresentationLayer/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xphr5dixgj

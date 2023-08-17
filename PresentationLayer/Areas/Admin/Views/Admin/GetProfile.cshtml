@@ -1,0 +1,112 @@
+﻿@model EntityLayer.DTOs.AppUserEditDto
+@{
+    ViewData["Title"] = "GetProfile";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .input-container {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .icon {
+        padding: 10px;
+        background: darkblue;
+        color: white;
+        min-width: 50px;
+        text-align: center;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+    }
+
+        .input-field:focus {
+            border: 2px solid darkblue;
+        }
+
+    /* Set a style for the submit button */
+    .btn {
+        background-color: darkblue;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+        .btn:hover {
+            opacity: 1;
+        }
+</style>
+
+
+<body>
+    <form method="post" style="max-width:%55px;margin:auto">
+        <h2 style="text-align:center;color:darkblue">PROFİLİM</h2>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="İsim" asp-for="Name">
+        </div>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="Soyisim" asp-for="Surname">
+        </div>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="Kullanıcı Adı" asp-for="UserName">
+        </div>
+        <div class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input class="input-field" type="text" placeholder="Email" asp-for="Email">
+        </div>
+
+        <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input class="input-field" type="password" placeholder="Şifre" asp-for="Password" id="myInput">
+            <i style="font-size:30px" class=" fa fa-eye" onclick="myFunction()"></i>
+        </div>
+        <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input class="input-field" type="password" placeholder="Şifre Tekrar" asp-for="ConfirmPassword" id="myInput2">
+            <i style="font-size:30px" class=" fa fa-eye" onclick="myFunction2()"></i>
+            @* <input type="checkbox" onclick="myFunction2()">Göster*@
+        </div>
+        <button type="submit" class="btn">Güncelle</button>
+    </form>
+</body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+    function myFunction2() {
+        var x = document.getElementById("myInput2");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>

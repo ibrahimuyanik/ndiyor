@@ -1,0 +1,39 @@
+﻿@model List<EntityLayer.Concrete.News>
+
+
+
+<div class="news-style-two">
+    <h3 class="news-title">
+        <span>Teknoloji</span>
+    </h3>
+    
+    <div class="row">
+        @foreach (var item in Model.Where(x => x.CategoryID == 7).OrderByDescending(x => x.ReleaseDate).Take(4))
+        {
+            <div class="col-md-6 col-sm-6">
+                <div class="post-block-wrapper clearfix">
+                    <div class="post-thumbnail">
+                        <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">
+                            <img class="img-rounded" width="304" height="236" src="@item.SignedUrl" alt="post-thumbnail" />
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title mt-3">
+                            <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Title</a>
+                        </h2>
+
+
+                        <div class="post-meta mb-2">
+                            <span class="posted-time"><i class="fa fa-clock-o mr-2"></i>@item.ReleaseDate.ToString("dd-MM-yyyy")</span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    
+</div>
+
+

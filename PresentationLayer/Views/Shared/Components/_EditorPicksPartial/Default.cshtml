@@ -1,0 +1,35 @@
+﻿@model List<EntityLayer.Concrete.News>
+
+<div class="news-style-one">
+    <h3 class="news-title">
+        <span>Editörün Seçtikleri</span>
+    </h3>
+    <div class="news-style-one-slide">
+        @foreach (var item in Model)
+        {
+            if (item.EditorPickStatus == true)
+            {
+                <div class="item">
+                    <div class="post-block-wrapper clearfix mb-5">
+                        <div class="post-thumbnail">
+                            <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">
+                                <img class="img-rounded" width="304" height="336" src="@item.SignedUrl" alt="post-image" />
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <h2 class="post-title mt-3">
+                                <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Title</a>
+                            </h2>
+                            <div class="post-meta mb-2">
+                                <span class="posted-time"><i class="fa fa-clock-o mr-2"></i>@item.ReleaseDate.ToString("dd-MM-yyyy")</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        }
+
+
+    </div>
+</div>

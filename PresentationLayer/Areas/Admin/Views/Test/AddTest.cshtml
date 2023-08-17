@@ -1,0 +1,23 @@
+﻿@model Test
+@{
+    ViewData["Title"] = "AddTest";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Haber Ekleme Sayfası</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <label>Test Başlığı</label>
+    <input asp-for="Title" class="form-control" style="background-color:lightgray" />
+    <br />
+    @Html.Label("Test Kategorisi:")
+    @Html.DropDownListFor(x => x.TestCategoryID, (List<SelectListItem>)ViewBag.listTestCategory,new { @class = "form-control" })
+    <br />
+    <label>Test Resmi</label>
+    <input type="file" class="form-control border" name="Photo" />
+    <br />
+
+    <input name="SavedUrl" type="hidden" class="form-control" />
+    <input name="SavedFileName" type="hidden" class="form-control" />
+    <button class="btn btn-info"> Kaydet</button>
+</form>

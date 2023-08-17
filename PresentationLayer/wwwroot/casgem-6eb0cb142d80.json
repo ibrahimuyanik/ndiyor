@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "casgem",
+  "private_key_id": "6eb0cb142d801a493a42ade7b3f26d878869571d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZsQ4hY3d2yX8Q\nSg1ZZsx9Cg4xpGZ5p2Gsc9CnQDiuh5jDlk6UXqTd5a760doEojnL7QBfgw0quY05\nd4bj81ZhEg7MfXK/LpDQION08dqYSEPu6F2fA2T1bfUXEXeQlhZ3MpqdrC8NtyFB\nUOerwK4+Nc7GBbJuVn+9Zy4/exwLpzV76WgAZxzrsZyc7Eu6nQ1YzrQXZuijYTVO\n0uA3Vcd0Ut6KE+a+hWoEmpqWJo466cGiqtOERJf/jfUzcJqWP/hiYlUCIAH1LWbi\ntryd9dKr/vOx7jh02BROScEFcQ8rnE+A4QhYrsmKqDDaY4Qj2ue/Mr7L0tP+HGQ2\ngjtIqrkfAgMBAAECggEAP8oGHfqLkx9QQHGyn7Pjz/AWYK2P6a4GjQYS6i+DbIEH\nXqi4tflVzj/zmkPL4ve2f+8e4N4CCbb9jw1bVYiEk0U7WOiZqzP180bv3+DO8Tib\nz3H/nQzdlJ136B6SLqgMRTlq3TELSLWU5RLUEBwR8uDJinU45+Qo4lNN1gQ5H6CB\nI6KuzRDO9Xcd23ozGJ6mbvGkZUo6eBJUifY/9KDF4xi3gE3GEPE0filTJLCqhoCY\n1PIhmPybfbwv0jHPU1NxA9yGgoL2B4soQhhsbwIuVVA1I80ljZGILw62jO5aaV0t\njJPbPqeRgKc8mXHMDV06e53R2a1M8/BhkDYMsg0M4QKBgQD33elpQhHGiZ3QIkYS\np9xgOErxKzIFDmLNpVZlmD3uLKRY8gC809+lnH0wcam2PrZ+R5O2smDotZJVkSVB\nkNDAaq9gxc3wErTB5jv9XQBUZHKkbXs6d0HjveGWkld2Lb8uvvkp6qhik2V1lcKg\n7YWYGZ9LvvSZHD2RP7AzafmBWwKBgQDg1au2p7rc1No4QxY3+B8fYBLjFxiT/p1M\nCYkk5O+A7UQOWhjxu2nrqQmCDq5xnhkk42VNaH7K7pfIm2TeaxVCbZLt2YxYBffS\nFITKkM0A+p+iBfp3Qy8zfSwagtFoeOI1Q1p18CWlndRWeuDoV6R/JUdWy9OHz0vm\nvSGFp9qOjQKBgCp2JpU0j0z+qD1OkciCXxtQqW31I2WAWGa4SzuuP/W8Sg8+reer\nOCXrz/prjlI9HhA1/NUQa8+Rw1bLPaGkyE4eOJsQZ74XxkVtRpuZwgOzDXyjkLes\nVGpKTgn4WelR3u2II7ENlPkGHRxuol/lMLykrwhP1yEfmGB4k5vLLMX/AoGAZarZ\nOgBAtEkf4F8dtfNiB2sHP18bQxjYgiCxvlgzoSYpJyBAtVac/+5xGTmQUlo+Xnrh\nPQ6qfxNC2XjDNPxRIbewwBMmrksMlBepMHwn53BtLPPtHW7o8iyA+//5t3cqOxGY\n30nXjDuBYBWyi/3NqZzu1GXY4kmvtcgCV5DeeKUCgYEA1aDl7rODYh1RGAMNjIPS\nKD+Ryz+O1aIv9Ha6u1hTnUZLcoVoTjnlsN098uKGuZGaYsaUFmGTBxyyjmAECcQj\nmx/a/KYyMQTOXL3np1GQeDJ5pQB5NQ+B2GAOSvyra6oAA1bWSJpceaHytFS+2/eD\nzy8WtnmZmttaiOq3Od/O6qk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "casgem@casgem.iam.gserviceaccount.com",
+  "client_id": "107162629140761218251",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/casgem%40casgem.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

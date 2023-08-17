@@ -1,0 +1,133 @@
+﻿@using PresentationLayer.Const;
+@model PresentationLayer.Models.MyViewModel
+
+
+<div class="main-navbar clearfix bg-dark ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg site-main-nav navigation">
+                    <a class="navbar-brand d-lg-none" href="/Default/Index">
+                        <img src="~/newsbit-main/theme/images/logos/footer-logo.png" alt="">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="fa fa-bars"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="/Default/Index">
+                                    Anasayfa
+                                </a>
+                            </li>
+                            
+                            
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Haberler
+                                </a>
+                                <div class="dropdown-menu">
+                                    @foreach (var item in Model.Categories)
+                                    {
+                                        <a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-categoryId="@item.CategoryID">@item.CategoryName</a>
+                                    }
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Testler
+                                </a>
+                                <div class="dropdown-menu">
+                                    @foreach (var item in Model.TestCategories)
+                                    {
+                                        <a class="dropdown-item" asp-controller="Test" asp-action="Index" asp-route-testId="@item.TestCategoryID">@item.TestCategoryName</a>
+
+                                    }
+
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="/Eat/Index" role="button">
+                                    Yemekler
+                                </a>
+                            </li>
+                           @* <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Account
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="~/newsbit-main/theme/account.html">Log In</a>
+                                    <a class="dropdown-item" href="~/newsbit-main/theme/signup.html">Register</a>
+                                </div>
+                            </li>*@
+
+                           @* 
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="~/newsbit-main/theme/404.html">404 Page</a>
+                                    <a class="dropdown-item" href="~/newsbit-main/theme/search.html">Search Page</a>
+                                </div>
+                            </li>*@
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Contact/Index/">İletişim</a>
+                            </li>
+
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                               
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="/Login/Logout">
+                                        Çıkış Yap
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="/User/GetUserProfile">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="/Login/">
+                                        Giriş Yap
+                                    </a>
+                                </li>
+                            }
+
+
+
+
+                        </ul>
+                        @*<div class="nav-search ml-auto d-none d-lg-block">
+                            <span id="search">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>*@
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+   @* <form class="site-search" method="get">
+        <input type="text" id="searchInput" name="site_search" placeholder="Enter Keyword Here..." autofocus="">
+        <div class="search-close">
+            <span class="close-search">
+                <i class="fa fa-times"></i>
+            </span>
+        </div>
+    </form>*@
+</div>

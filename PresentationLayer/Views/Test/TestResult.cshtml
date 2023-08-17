@@ -1,0 +1,90 @@
+﻿@using PresentationLayer.Controllers;
+@model TestResultViewModel
+@{
+    ViewData["Title"] = "TestResult";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+<style>
+
+
+    .result-container {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #FF3366;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        color: #666;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #777;
+        margin: 0;
+    }
+
+    .score {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .question-container {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .question-text {
+        font-weight: bold;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .answer-text {
+        color: #666;
+        margin-bottom: 8px;
+    }
+
+    .correct-answer {
+        color: green;
+        font-weight: bold;
+    }
+
+    .incorrect-answer {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<div class="result-container">
+    <h1>@Model.TestName Sonuç Sayfası</h1>
+
+    <div class="result-info">
+        <h2>@Model.ResultText</h2>
+        <p class="score">Puanınız: @(((double)Model.CorrectAnswers / Model.TotalQuestions) * 100)</p>
+    </div>
+
+    <h2>Sorular ve Cevaplar</h2>
+    @foreach (var question in Model.Questions)
+    {
+        <div class="question-container">
+            <h3 class="question-text">Soru: @question.QuestionText</h3>
+            <p class="answer-text">Seçilen Cevap: <span class="@((question.SelectedOption == question.CorrectOption) ? "correct-answer" : "incorrect-answer")">@question.SelectedOption</span></p>
+            <p class="answer-text">Doğru Cevap: <span class="correct-answer">@question.CorrectOption</span></p>
+        </div>
+    }
+</div>
+

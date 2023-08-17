@@ -1,0 +1,33 @@
+﻿@model Question
+@{
+    ViewData["Title"] = "AddQuestion";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Soru Ekleme Sayfası</h1>
+
+<form method="post" enctype="multipart/form-data">
+
+ 
+    @Html.Label("Test Kategorisi:")
+    @Html.DropDownListFor(x => x.TestCategoryID, (List<SelectListItem>)ViewBag.listTestCategory,
+    new { @class = "form-control" })
+    <br />
+    @Html.Label("Test:")
+    @Html.DropDownListFor(x => x.TestID, (List<SelectListItem>)ViewBag.listTest,
+    new { @class = "form-control" })
+    <br />
+    <label>İçerik</label>
+    <textarea asp-for="Content" rows="4" cols="165" class="input" style="background-color:lightgray"> </textarea>
+    <br />
+    <label>Doğru Cevap</label>
+    <input asp-for="TrueAnswer" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>Soru Resmi</label>
+    <input type="file" class="form-control border" name="Photo" />
+    <br />
+
+    <input name="SavedUrl" type="hidden" class="form-control" />
+    <input name="SavedFileName" type="hidden" class="form-control" />
+    <button class="btn btn-info"> Kaydet</button>
+</form>

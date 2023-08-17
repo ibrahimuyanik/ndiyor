@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    @await Component.InvokeAsync("_SocialsTopPartial")
+
+    @await Component.InvokeAsync("_BannerPartial")
+
+    @await Component.InvokeAsync("_NavbarPartial")
+
+    <div class="py-30"></div>
+
+
+    @RenderSection("_FeaturePartial",false)
+
+
+    <section class="block-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                    @RenderBody()
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    @RenderSection("TourGameHealth",false)
+
+
+
+
+
+    @await Component.InvokeAsync("_FooterPartial")
+
+
+    @await Component.InvokeAsync("_ScriptPartial")
+
+</body>
+</html>
+
+

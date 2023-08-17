@@ -1,0 +1,39 @@
+﻿@model List<EntityLayer.Concrete.News>
+
+<div class="widget">
+    <h3 class="news-title">
+        <span>Son Dakika</span>
+    </h3>
+
+    <div class="post-list-block">
+   @*     .OrderByDescending(x => x.ReleaseDate).Take(7)*@
+        @foreach (var item in Model.OrderByDescending(x => x.ReleaseDate))
+        {
+            if(item.HotNewsStatus == true && item.NewsStatus==true)
+            {
+                
+                <div class="post-block-wrapper post-float ">
+                    <div class="post-thumbnail">
+                        <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">
+                            <img class="img-rounded" width="180" height="180" src="@item.SignedUrl" alt="post-thumbnail" />
+                        </a>
+                    </div>
+                    <div class="post-content">
+                        <h2 class="post-title title-sm">
+                            <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Title</a>
+                        </h2>
+                        <div class="post-meta">
+                            
+                            <span class="posted-time"><i class="fa fa-clock-o mr-1"></i>@item.ReleaseDate.ToString("dd-MM-yyyy")</span>
+                            
+                        </div>
+                    </div>
+                </div>
+               
+            }
+            
+        }
+
+
+    </div>
+</div>

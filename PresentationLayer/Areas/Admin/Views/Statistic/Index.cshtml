@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">İstatistik Tabloları</h1>
+
+<div class="col-xl-12">
+
+	<hr>
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="card text-white bg-primary ">
+				
+				<div class="card-body">
+					<h5 class="card-title text-white" style="font-size:20px">Sitedeki Kategori Sayısı</h5>
+					<p class="card-text" style="font-size:20px">@ViewBag.totalCategories</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card text-white bg-secondary ">				
+				<div class="card-body">
+					<h5 class="card-title text-white" style="font-size:20px">Sitedeki Haber Sayısı</h5>
+					<p class="card-text" style="font-size:20px">@ViewBag.newsCount</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card text-white bg-success ">
+				
+				<div class="card-body">
+					<h5 class="card-title text-white" style="font-size:20px">Toplam Yemek Tarifi</h5>
+					<p class="card-text" style="font-size:20px">@ViewBag.eatCount</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card text-white bg-danger ">	
+				<div class="card-body">
+					<h5 class="card-title text-white" style="font-size:20px">Toplam Kullanıcı Sayısı</h5>
+					<p class="card-text" style="font-size:20px">@ViewBag.userCount</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card text-white bg-warning ">			
+				<div class="card-body">
+					<h5 class="card-title text-white" style="font-size:20px">Toplam Test Sayısı</h5>
+					<p class="card-text" style="font-size:20px">@ViewBag.testCount</p>
+				</div>
+			</div>
+		</div>
+	@*	<div class="col-sm-4">
+			<div class="card text-white bg-info ">
+				<div class="card-header">aaaaaaaa</div>
+				<div class="card-body">
+					<h5 class="card-title text-white">Info card title</h5>
+					<p class="card-text"></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card bg-light">
+				<div class="card-header">Header</div>
+				<div class="card-body">
+					<h5 class="card-title">Light card title</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="card text-white bg-dark ">
+				<div class="card-header">Header</div>
+				<div class="card-body">
+					<h5 class="card-title text-white">Dark card title</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				</div>
+			</div>
+		</div>*@
+	</div>
+</div>

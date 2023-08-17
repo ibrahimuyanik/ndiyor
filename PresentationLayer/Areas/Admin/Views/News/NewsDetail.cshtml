@@ -1,0 +1,26 @@
+﻿@using EntityLayer.DTOs;
+@model NewsDetailDto
+
+@{
+    ViewData["Title"] = "NewsDetail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="col-sm-12">
+	<div class="card">
+		<div class="card-header">
+			<h5 class="mb-0">Haber Detayları</h5>
+			<hr>
+			<a class="btn btn-primary  m-t-5" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">@Model.Title</a>
+			
+		</div>
+		<div class="collapse" id="collapseExample">
+			<div class="card-body">
+				<p>Tarih:  @Model.ReleaseDate.ToShortDateString()</p>
+				<p>Katgeori:  @Model.CategoryName</p>
+				<p class="mb-0">
+					@Model.Content
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

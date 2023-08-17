@@ -1,0 +1,327 @@
+﻿@using EntityLayer.DTOs;
+@model NewsDetailDto
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<div class="single-post">
+    <div class="post-header mb-5">
+        <a class="post-category" asp-controller="News" asp-action="Index" asp-route-categoryId="@Model.CategoryID">@Model.CategoryName</a>
+        <h1>@Model.Title</h1>
+
+      
+    </div>
+    <div class="post-body">
+        <div class="post-featured-image">
+            <img style="max-width: 75%;max-height: 600px;" src="@Model.SignedUrl" class="img-fluid" alt="featured-image">
+        </div>
+        <div class="entry-content">
+           
+            <p>
+                @Html.Raw(@Model.Content)
+            </p>
+          
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<div class="related-posts-block">
+    <h3 class="news-title">
+        <span>Related Posts</span>
+    </h3>
+    <div class="news-style-two-slide">
+        @foreach (var item in Model.Newses)
+        {
+            <div class="item">
+                <div class="post-block-wrapper clearfix">
+                    <div class="post-thumbnail mb-0">
+                        <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">
+                            <img class="img-fluid" src="~/newsbit-main/theme/images/news/news-04.jpg" alt="post-thumbnail" />
+                        </a>
+                    </div>
+                    <a class="post-category" asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Category.CategoryName</a>
+                    <div class="post-content">
+                        <h2 class="post-title title-sm">
+                            <a asp-controller="News" asp-action="Detail" asp-route-newsId="@item.NewsID">@item.Title</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>*@
+
+<div id="comments" class="comments-block block">
+    <h3 class="news-title">
+        <span>Yorumlar</span>
+    </h3>
+    <ul class="all-comments" id="comment-list">
+        
+    </ul>
+</div>
+
+<input type="hidden" value="@Model.NewsID" id="newsID" />
+<script>
+    
+    //Yorum Listeleme
+    function loadComponent(){
+        var newsID = $("#newsID").val();
+        debugger;
+        $.ajax({
+            type:"GET",
+            url:`/News/CommentList?newsId=${newsID}`,
+            success : function(data){
+                debugger;
+                var data2 = jQuery.parseJSON(data);
+               
+                var commentList = $("#comment-list");
+                commentList.empty();
+                var userId = @TempData["userId"];
+                $.each(data2, function (index, comment) {
+                    var formatliTarih = moment(comment.ReleaseDate).format("DD MMMM HH:mm");
+                    var commentHTML =
+                        `
+                                  <li>
+                                     <div class="comment" style="width=730px">
+                                                <img class="commented-person" alt="" src="images/news/author-01.jpg">
+                                                <div class="comment-body" style="width=730px">
+                                                <div class="meta-data">
+                                                        <span class="commented-person-name">${comment.UserName}</span>
+                                                    <span class="comment-hour d-block"><i class="fa fa-clock-o mr-2"></i>${formatliTarih}</span>
+                                                </div>
+                                            <div class="comment-content" style="width=730px">
+                                                <p style="width=730px">
+                                                ${comment.Commentt}
+                                            </p>
+                                        </div>
+
+
+                                        <div class="text-left">
+
+
+                                                                    ${comment.AppUserID !== userId ? '' : `<a  class= "btn comment-reply comment-editt" id="edit-cmt" data-id="${comment.CommentID}"> <i class="fa fa-reply"  > </i> Yorumu Güncelle</a >`}
+
+                                                ${comment.AppUserID !== userId ? '' : `<a class="btn comment-reply comment-sil" data-comment-id="${comment.CommentID}"><i class="fa fa-remove"></i> Yorumu Sil</a>
+        `}
+
+
+                        </div>
+                                        </div>
+                                    </div>
+                                   </li>
+                                   `;
+
+
+
+
+                    commentList.append(commentHTML);
+                });
+
+                
+
+                $(".comment-editt").on("click", function (e) {
+                    e.preventDefault();
+
+                    var comment = $(this).closest(".comment");
+                    var commentContent = comment.find(".comment-content");
+
+
+                    // Orijinal yorum metnini saklayın
+                    var originalCommentText = commentContent.find("p").text().trim();
+                    var id = $("#edit-cmt").data("id");
+
+                    commentContent.html(`
+                <div class="guncelle-container">
+                    <input type="text" class="form-control guncelle-input" value="${originalCommentText}">
+            <button class="btn comment-reply comment-guncelle" data-comment-id="${id}"><i class="fa fa-pencil"></i> Yorumu Güncelle</button>
+                            <button class="btn btn-outline-secondary iptal-et">İptal</button>
+                </div>
+            `);
+
+                    // iptal butonuna tıklandığında orijinal yorum metnini geri yükle
+                    $(document).on("click", ".iptal-et", function () {
+                        commentContent.html(`
+                    <p>${originalCommentText}</p>
+                `);
+                    });
+                });
+
+
+
+
+                // ...
+
+                // Silme butonlarına tıklandığında
+                $(document).on("click", ".comment-sil", function (e) {
+                    e.preventDefault();
+
+                    var comment = $(this).closest(".comment");
+                    var commentId = $(this).data("comment-id"); // data-comment-id özelliğini kullanın
+
+                    // Silme isteği gönder
+                    $.ajax({
+                        type: "GET",
+                        url: `/News/DeleteComment?id=${commentId}`, // commentId olarak düzeltilmeli
+                        success: function (response) {
+                            // Başarılı silme işlemi sonrası yapılacak işlemler
+                            // Örneğin, yorumu arayüzden kaldırma gibi
+                            loadComponent();
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                });
+
+                // ...
+
+
+                // Güncelleme butonlarına tıklandığında
+                $(document).on("click", ".comment-guncelle", function (e) {
+                    e.preventDefault();
+
+                    var comment = $(this).closest(".comment");
+                    var commentId = $(this).data("comment-id");
+                    var id = $("#edit-cmt").data("id");
+
+                    var updatedCommentText = comment.find(".guncelle-input").val();
+
+                    // Güncelleme isteği gönder
+                    $.ajax({
+                        type: "POST",
+                        url: `/News/UpdateComment?id=${id}&updatedComment=${updatedCommentText}`,
+
+
+                        success: function (response) {
+                            // Başarılı güncelleme işlemi sonrası yapılacak işlemler
+                            // Örneğin, yorum metnini güncelleme gibi
+                            //comment.find(".comment-content p").text(updatedCommentText);
+
+                            // Güncelleme işlemi tamamlandığında düzenleme alanını kapatın
+                            //comment.find(".guncelle-container").remove();
+                            loadComponent();
+                        },
+                        error: function (xhr, status, error) {
+                            console.error(error);
+                        }
+                    });
+                });
+
+
+
+            }
+
+            
+        });
+    }
+
+    loadComponent();
+
+
+    //Yorum Ekleme
+    $(document).ready(function () {
+
+
+
+        $("#btn-comment").click(function (e) {
+
+            e.preventDefault();
+
+
+            var newsId = $("#newsID").val();
+            var commentt = $("#commentt").val();
+            var userId = @TempData["userId"];
+            var date = new Date();
+            var data2 = { NewsID: newsId, Commentt: commentt, AppUserId: userId, ReleaseDate: date };
+            //var data2 = $(this).serialize();
+            $.ajax({
+                type: "POST",
+                url: "/News/CreateComment",
+                data: data2,
+                success: function (data2) {
+                    // Yorum başarıyla eklendikten sonra yapılacak işlemler
+                    // Örneğin, yorumları yeniden yükleme gibi
+
+                   loadComponent()
+
+                    //window.location.href = `/Eat/Detail?eatId=${eatId}`;
+
+                    console.log(eatId);
+
+
+                },
+                error: function (xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+</script>
+
+
+@if (!User.Identity!.IsAuthenticated)
+{
+    <p>Yorum yapmak ve görüntülemek için <a class="btn btn-outline-danger" href="/Login/Index">Giriş Yap</a></p>
+
+}
+else
+{
+     <div class="comment-form ">
+        <h3 class="title-normal">Yorum Bırakın </h3>
+        <form role="form" id="commentForm">
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea class="form-control required-field" id="commentt" name="Commentt" placeholder="Yorum Yapın..." rows="8" required></textarea>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-12">
+                    <button class="comments-btn btn btn-primary " id="btn-comment" type="submit">Gönder</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+}
+
+
+
+<style>
+    .guncelle-container {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .guncelle-input {
+        flex: 1;
+        margin-right: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 6px;
+    }
+
+    .guncelle-tamamla {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+</style>

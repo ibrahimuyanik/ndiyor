@@ -1,0 +1,132 @@
+﻿@model X.PagedList.IPagedList<EntityLayer.Concrete.Eat>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+<style>
+    /* Style the buttons */
+    .btn1 {
+        border: none;
+        outline: none;
+        padding: 7px 14px;
+        background-color: green;
+        color:white;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .btn2 {
+        border: none;
+        outline: none;
+        padding: 0px 1px;
+        background-color:lightgray;
+        color: black;
+        cursor: pointer;
+        font-size: 10px;
+    }
+        /* Style the active class, and buttons on mouse-over */
+        .active1, .btn1:hover {
+            background-color: red;
+            color: white;
+        }
+</style>
+
+<h1 style="text-align:center;color:darkblue">YEMEKLER</h1>
+<br />
+<a href="/Admin/Eat/AddEat/" class="btn btn-success">Yeni</a>
+<br />
+<hr />
+<table class="table table-bordered">
+    <tr style="background-color:darkblue; text-align:center;color:white">
+        
+        <th>Fotoğraf</th>
+        <th>Yemeğin Adı</th>
+        <th>Tarif</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr style="background-color:lightgray; text-align:center">
+            <td><img width="60px" src="@item.SignedUrl" class="figure-img img-fluid rounded" alt="@item.SavedFileName"></td>
+            <td>@item.EatTitle</td>
+            <td><a href="/Admin/Eat/EatDetail/@item.EatID" class="btn btn-primary">Tarifi Gör</a></td>
+            <td>@(((DateTime)item.ReleaseDate).ToString("dd-MMM-yyyy"))</td>
+
+            <td id="myDIV">
+                <a id="btn" href="/Admin/Eat/EatStatus/@item.EatID">
+                    @if (item.EatStatus == true)
+                    {
+                        <button class="btn1">Pasif Yap</button>
+                    }
+                    else
+                    {
+                        <button class="btn1 active1">Aktif Yap</button>
+                    }
+                </a>
+            </td>
+            <td><a href="/Admin/Eat/EditEat/@item.EatID" class="btn btn-warning">Güncelle</a></td>
+
+        </tr>
+    }
+</table> 
+<nav aria-label="pagination-wrapper" class="pagination-wrapper">
+    <ul class="pagination justify-content-center">
+        @if (Model.PageNumber > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "Eat", new { page = Model.PageNumber - 1 })" aria-label="Previous">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-left mr-2"></i>Geri</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link" aria-label="Previous" aria-disabled="true">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-left mr-2"></i>Geri</span>
+                </span>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Index", "Eat", new { page = i})">@i</a>
+            </li>
+        }
+
+        @if (Model.PageNumber < ViewBag.TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "Eat", new { page = Model.PageNumber + 1 })" aria-label="Next">
+                    <span>İleri<i class="fa fa-angle-double-right ml-2"></i></span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link" aria-label="Next" aria-disabled="true">
+                    <span>İleri<i class="fa fa-angle-double-right ml-2"></i></span>
+                </span>
+            </li>
+        }
+    </ul>
+</nav>
+
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+</script>

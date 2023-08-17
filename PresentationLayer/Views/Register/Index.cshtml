@@ -1,0 +1,67 @@
+﻿@model PresentationLayer.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+    <section class="login-signup section-padding">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-7">
+                    <div class="signup">
+                      @*  <div class="text-center"><a href="index.html"><img src="~/newsbit-main/theme/images/logos/logo.png" alt="" class="img-fluid"></a></div>*@
+                        <h3 class="mt-4" style="text-align:center">KAYIT OL</h3>
+                        <br />
+                        <form method="post" class="signup-form row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="f-name">Ad</label>
+                                    <input type="text" class="form-control" id="f-name" asp-for="Name" placeholder="Adınız">
+                                    <span asp-validation-for="Name" class="text-danger "></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="l-name">Soyad</label>
+                                    <input type="text" id="l-name" asp-for="Surname" class="form-control" placeholder="Soyadınız">
+                                    <span asp-validation-for="Surname" class="text-danger "></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label >Kullanıcı Adı</label>
+                                    <input type="text" asp-for="Username" class="form-control" placeholder="Kullanıcı Adı Giriniz">
+                                    <span asp-validation-for="Username" class="text-danger "></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email-address">Email</label>
+                                    <input type="email" class="form-control" asp-for="Email" id="email-address" placeholder="Email Adresiniz">
+                                    <span asp-validation-for="Email" class="text-danger "></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="password-s">Şifre</label>
+                                    <input type="password" class="form-control" id="password-s" asp-for="Password" placeholder="Şifreniz">
+                                    <span asp-validation-for="Password" class="text-danger "></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="password-s">Şifre Tekrar</label>
+                                    <input type="password" class="form-control" id="password-s" asp-for="ConfirmPassword" placeholder="Şifeyi Tekrar Giriniz">
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger "></span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-primary" type="submit">Kayıt Ol</button>
+                                <p class="mt-5 mb-0">Zaten Bir Hesabınız Var Mı? <a href="/Login/Index">Giriş Yap</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,52 @@
+﻿@model List<EntityLayer.Concrete.SocialMedia>
+
+<div class="trending-bar-dark hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="trending-bar-title">Trending News</h3>
+                <div class="trending-news-slider">
+                    <div class="item">
+                        <div class="post-content">
+                            <h2 class="post-title title-sm">
+                                <a href="~/newsbit-main/theme/single-post.html">Ex-Googler warns coding bootcamps are lacking</a>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="post-content">
+                            <h2 class="post-title title-sm">
+                                <a href="~/newsbit-main/theme/single-post.html">Intel’s new smart glasses actually look good</a>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="post-content">
+                            <h2 class="post-title title-sm">
+                                <a href="~/newsbit-main/theme/single-post.html">Here's How To Get Free Pizza On 2 hour</a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12 col-sm-12 col-xs-12 top-nav-social-lists text-lg-right col-lg-4 ml-lg-auto">
+                <ul class="list-unstyled mt-4 mt-lg-0">
+                    <li>
+                        @foreach(var item in Model)
+                        {
+                            <a href="@item.Url">
+                                <span class="social-icon">
+                                    <i class="@item.Icon"></i>
+                                </span>
+                            </a>
+                        }
+                        
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

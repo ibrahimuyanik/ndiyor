@@ -1,0 +1,78 @@
+﻿@model List<EntityLayer.Concrete.Test>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+<h1 style="text-align:center;color:darkblue">TESTLER</h1>
+<br />
+<a href="/Admin/Test/AddTest/" class="btn btn-success"> Yeni Test Oluştur</a>
+<br />
+<hr />
+<table class="table table-bordered">
+    <tr style="background-color:darkblue; text-align:center;color:white">
+        <th>#</th>
+        <th>Test Başlığı</th>
+        <th>Test Kategorisi</th>
+        <th>Test Resmi</th>
+        <th>Sil</th>
+        <th>Güncelle </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr style="background-color:lightgray; text-align:center">
+            <td>@count</td>
+            <td>@item.Title</td>
+            <td>@item.TestCategory.TestCategoryName</td>
+            <td><img width="60px" src="@item.SignedUrl" class="figure-img img-fluid rounded" alt="@item.SavedFileName"></td>
+            <td><a href="/Admin/Test/DeleteTest/@item.TestID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Test/EditTest/@item.TestID" class="btn btn-outline-dark"> Güncelle</a></td>
+        </tr>
+    }
+</table> 
+
+@*<nav aria-label="pagination-wrapper" class="pagination-wrapper">
+    <ul class="pagination justify-content-center">
+        @if (Model.PageNumber > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "Test", new { page = Model.PageNumber - 1 })" aria-label="Previous">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-left mr-2"></i>Geri</span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link" aria-label="Previous" aria-disabled="true">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-left mr-2"></i>Geri</span>
+                </span>
+            </li>
+        }
+
+        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+        {
+            <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Index", "Test", new { page = i})">@i</a>
+            </li>
+        }
+
+        @if (Model.PageNumber < ViewBag.TotalPages)
+        {
+            <li class="page-item">
+                <a class="page-link" href="@Url.Action("Index", "Test", new { page = Model.PageNumber + 1 })" aria-label="Next">
+                    <span>İleri<i class="fa fa-angle-double-right ml-2"></i></span>
+                </a>
+            </li>
+        }
+        else
+        {
+            <li class="page-item disabled">
+                <span class="page-link" aria-label="Next" aria-disabled="true">
+                    <span>İleri<i class="fa fa-angle-double-right ml-2"></i></span>
+                </span>
+            </li>
+        }
+    </ul>
+</nav>*@

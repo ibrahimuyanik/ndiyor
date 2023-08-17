@@ -1,0 +1,37 @@
+﻿@model News
+@{
+    ViewData["Title"] = "EditNews";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">Haber Düzenleme Sayfası</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="NewsID" />
+    <label>Haber Başlığı</label>
+    <input asp-for="Title" class="form-control" style="background-color:lightgray" />
+    <br />
+    <label>İçerik</label>
+    <textarea asp-for="Content" rows="4" cols="165" class="input" style="background-color:lightgray"> </textarea>
+    <br />
+    
+    <input type="hidden" asp-for="ReleaseDate" class="form-control" style="background-color:lightgray" />
+    <br />
+    @Html.Label("Kategori:")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.editCategory,
+    new { @class = "form-control" })
+    <br />
+    <label>Haber Fotoğrafı</label>
+    <input type="file" class="form-control border" name="Photo" />
+    <br />
+    @if (!String.IsNullOrWhiteSpace(Model.SignedUrl))
+    {
+        <div cite="md-col-10">
+            <img style="width:400px" src="@Model.SignedUrl" class="figure-img img-fluid rounded max-image-size" alt="@Model.SavedFileName">
+        </div>
+    }
+    <br />
+    <input name="SavedUrl" type="hidden" class="form-control" />
+    <input name="SavedFileName" type="hidden" class="form-control" />
+    <button class="btn btn-info"> Güncelle </button>
+</form>

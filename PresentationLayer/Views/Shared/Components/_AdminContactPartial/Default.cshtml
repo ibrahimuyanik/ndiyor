@@ -1,0 +1,36 @@
+﻿@model List<Contact>
+<li>
+    <div class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="icon feather icon-bell"></i>
+            <span class="badge badge-pill badge-danger">@ViewBag.count </span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right notification">
+            <div class="noti-head">
+                <h6 class="d-inline-block m-b-0">Bildirimler</h6>
+
+            </div>
+            <ul class="noti-body">
+                <li class="n-title">
+                    <p class="m-b-0">Gelen Mesaj</p>
+                </li>
+                @foreach (var item in Model)
+                {
+                    <li class="notification" style="background-color:antiquewhite">
+                        <div class="media">
+                            <div class="media-body">
+                                <p><strong>@item.NameSurname</strong></p>
+                                <p>@item.Content</p>
+                            </div>
+                        </div>
+                    </li>
+                }
+               
+
+            </ul>
+            <div class="noti-footer">
+                <a href="#">Tümünü Göster</a>
+            </div>
+        </div>
+    </div>
+</li>

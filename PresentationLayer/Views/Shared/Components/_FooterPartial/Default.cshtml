@@ -1,0 +1,30 @@
+﻿@model List<EntityLayer.Concrete.SocialMedia>
+
+<footer class="footer footer-main ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-sm-12 col-lg-6 text-center">
+                <a href="/Default/Index"><img width="150" src="~/newsbit-main/theme/images/logos/footer-logo.png" alt="" class="img-fluid"></a>
+                <p class="mt-4">Casgem Full Stack .Net Core Eğitimi Kapsamında Yapılan Onedio Projesi</p>
+
+                <ul class="list-inline footer-social">
+                    @foreach (var item in Model)
+                    {
+                        <li class="li list-inline-item"><a href="@item.Url"><i class="@item.Icon"></i></a></li>
+
+                    }
+                </ul>
+
+                <div class="copyright-text text-center">
+                    <p class="mb-0">© Tüm Hakları Saklıdır - 2023</p>
+                </div>
+            </div>
+
+            <div class="scroll-to-top">
+                <button class="btn btn-primary" title="Back to Top">
+                    <i class="fa fa-angle-up"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>

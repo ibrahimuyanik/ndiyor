@@ -1,0 +1,46 @@
+﻿@model Question
+@{
+    ViewData["Title"] = "EditQuestion";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center;color:darkblue">SORU GÜNCELLEME SAYFASI</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="QuestionID" />
+    @Html.Label("Test Kategorisi:")
+    @Html.DropDownListFor(x => x.TestCategoryID, (List<SelectListItem>)ViewBag.editCategory,
+    new { @class = "form-control" })
+    <br />
+    @Html.Label("Test:")
+    @Html.DropDownListFor(x => x.TestID, (List<SelectListItem>)ViewBag.editTest,
+    new { @class = "form-control" })
+    <br />
+    <label>İçerik :</label>
+    <br />
+    <textarea asp-for="Content" rows="4" cols="165" class="input" style="background-color:lightgray"> </textarea>
+    <br />
+
+    @Html.Label("Doğru Cevap:")
+    @Html.DropDownListFor(x => x.TrueAnswer, (List<SelectListItem>)ViewBag.trueAnswers,
+    new { @class = "form-control" })
+    <br />
+
+
+    @*<label>Doğru Cevap</label>
+    <input asp-for="TrueAnswer"  class="form-control" style="background-color:lightgray " />
+    <br />*@
+    <label>Soru Fotoğrafı</label>
+    <input type="file" class="form-control border" name="Photo" />
+    <br />
+    @if (!String.IsNullOrWhiteSpace(Model.SignedUrl))
+    {
+        <div cite="md-col-10">
+            <img style="width:400px" src="@Model.SignedUrl" class="figure-img img-fluid rounded max-image-size" alt="@Model.SavedFileName">
+        </div>
+    }
+    <br />
+    <input name="SavedUrl" type="hidden" class="form-control" />
+    <input name="SavedFileName" type="hidden" class="form-control" />
+    <button class="btn btn-info"> Güncelle </button>
+</form>

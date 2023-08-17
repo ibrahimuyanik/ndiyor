@@ -1,0 +1,21 @@
+﻿@model Question
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1 style="text-align:center;color:darkblue">Soru Şıkkı Ekleme Sayfası</h1>
+
+<form method="post" enctype="multipart/form-data" asp-area="Admin" asp-controller="QuestionOption" asp-action="Index">
+
+    @Html.Label("Sorular:")
+    @Html.DropDownListFor(x => x.QuestionID, (List<SelectListItem>)ViewBag.listTest,
+    new { @class = "form-control", @name="QuestionID"})
+    <br />
+    <label>Soru Şıkkı</label>
+    <textarea asp-for="Content" name="Option" rows="2" cols="165" class="input" style="background-color:lightgray"> </textarea>
+    <br />
+
+    <button class="btn btn-info"> Kaydet</button>
+</form>

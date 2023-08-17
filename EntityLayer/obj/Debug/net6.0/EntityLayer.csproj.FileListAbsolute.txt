@@ -1,0 +1,15 @@
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\bin\Debug\net6.0\EntityLayer.deps.json
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\bin\Debug\net6.0\CoreLayer.dll
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\bin\Debug\net6.0\CoreLayer.pdb
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.AssemblyInfo.cs
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.csproj.CopyComplete
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.dll
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\refint\EntityLayer.dll
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\EntityLayer.pdb
+C:\Users\ibrah\Source\Workspaces\onedioProject\onedioProject\EntityLayer\obj\Debug\net6.0\ref\EntityLayer.dll

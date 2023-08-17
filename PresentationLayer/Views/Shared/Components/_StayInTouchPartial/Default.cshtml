@@ -1,0 +1,20 @@
+﻿@model List<EntityLayer.Concrete.SocialMedia>
+
+<div class="widget">
+    <h3 class="news-title">
+        <span>İletişimde Kalın</span>
+    </h3>
+
+    <ul class="list-inline social-widget">
+        @foreach(var item in Model)
+        {
+            <li class="list-inline-item">
+                <a class="@item.Name" href="@item.Url" target="_blank">
+                    <i class="@item.Icon"></i>
+                </a>
+            </li>
+        }
+        
+    </ul>
+
+</div>

@@ -1,0 +1,30 @@
+﻿@model List<TestCategory>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1 style="text-align:center;color:darkblue">TEST KATEGORİLERİ </h1>
+<br />
+<a href="/Admin/TestCategory/AddTestCategory/" class="btn btn-success"> Yeni Test Kategori</a>
+<br />
+<hr />
+<table class="table table-bordered">
+    <tr style="background-color:darkblue; text-align:center;color:white">
+        <th>#</th>
+        <th>Test Kategori Adı</th>
+       <th>Sil</th>
+       <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr style="background-color:lightgray; text-align:center">
+            <td>@count</td>
+            <td>@item.TestCategoryName</td>
+            <td><a href="/Admin/TestCategory/DeleteTestCategory/@item.TestCategoryID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/TestCategory/EditTestCategory/@item.TestCategoryID" class="btn btn-warning"> Güncelle</a></td>
+        </tr>
+    }
+</table> 
